@@ -1,0 +1,581 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/steambap/svg-captcha#readme"
+
+    >svg-captcha (v1.3.4)</a>
+</h1>
+<h4>generate svg captcha in node.js or express.js</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.svg-captcha">module svg-captcha</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-captcha.svg-captcha">
+            function <span class="apidocSignatureSpan"></span>svg-captcha
+            <span class="apidocSignatureSpan">(text, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-captcha.create">
+            function <span class="apidocSignatureSpan">svg-captcha.</span>create
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-captcha.createMathExpr">
+            function <span class="apidocSignatureSpan">svg-captcha.</span>createMathExpr
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-captcha.loadFont">
+            function <span class="apidocSignatureSpan">svg-captcha.</span>loadFont
+            <span class="apidocSignatureSpan">(filepath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-captcha.randomText">
+            function <span class="apidocSignatureSpan">svg-captcha.</span>randomText
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">svg-captcha.</span>option_manager</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">svg-captcha.</span>options</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">svg-captcha.</span>random</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.svg-captcha.option_manager">module svg-captcha.option_manager</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-captcha.option_manager.loadFont">
+            function <span class="apidocSignatureSpan">svg-captcha.option_manager.</span>loadFont
+            <span class="apidocSignatureSpan">(filepath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">svg-captcha.option_manager.</span>options</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.svg-captcha.random">module svg-captcha.random</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-captcha.random.captchaText">
+            function <span class="apidocSignatureSpan">svg-captcha.random.</span>captchaText
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-captcha.random.color">
+            function <span class="apidocSignatureSpan">svg-captcha.random.</span>color
+            <span class="apidocSignatureSpan">(bgColor)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-captcha.random.greyColor">
+            function <span class="apidocSignatureSpan">svg-captcha.random.</span>greyColor
+            <span class="apidocSignatureSpan">(min, max)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-captcha.random.int">
+            function <span class="apidocSignatureSpan">svg-captcha.random.</span>int
+            <span class="apidocSignatureSpan">(min, max)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-captcha.random.mathExpr">
+            function <span class="apidocSignatureSpan">svg-captcha.random.</span>mathExpr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.svg-captcha" id="apidoc.module.svg-captcha">module svg-captcha</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.svg-captcha.svg-captcha" id="apidoc.element.svg-captcha.svg-captcha">
+        function <span class="apidocSignatureSpan"></span>svg-captcha
+        <span class="apidocSignatureSpan">(text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">svg-captcha = function (text, options) {
+	text = text || random.captchaText();
+	options = Object.assign({}, opts, options);
+	const width = options.width;
+	const height = options.height;
+	const bg = options.background;
+	if (bg) {
+		options.color = true;
+	}
+
+	const bgRect = bg ?
+		`&#x3c;rect width=&#x22;100%&#x22; height=&#x22;100%&#x22; fill=&#x22;${bg}&#x22;/&#x3e;` : &#x27;&#x27;;
+	const paths =
+		[].concat(getLineNoise(width, height, options))
+			.concat(getText(text, width, height, options))
+			.sort(() =&#x3e; Math.random() - 0.5)
+			.join(&#x27;&#x27;);
+	const start = `&#x3c;svg xmlns=&#x22;http://www.w3.org/2000/svg&#x22; width=&#x22;${width}&#x22; height=&#x22;${height}&#x22;&#x3e;`;
+	const xml = `${start}${bgRect}${paths}&#x3c;/svg&#x3e;`;
+
+	return xml;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-captcha.create" id="apidoc.element.svg-captcha.create">
+        function <span class="apidocSignatureSpan">svg-captcha.</span>create
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (options) {
+	const text = random.captchaText(options);
+	const data = createCaptcha(text, options);
+
+	return {text, data};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## install
+&#x3e; npm install --save svg-captcha
+
+## usage
+```Javascript
+var svgCaptcha = require(&#x27;svg-captcha&#x27;);
+
+var captcha = svgCaptcha.<span class="apidocCodeKeywordSpan">create</span>();
+console.log(c);
+// {data: &#x27;&#x3c;svg.../svg&#x3e;&#x27;, text: &#x27;abcd&#x27;}
+```
+with express
+```Javascript
+var svgCaptcha = require(&#x27;svg-captcha&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-captcha.createMathExpr" id="apidoc.element.svg-captcha.createMathExpr">
+        function <span class="apidocSignatureSpan">svg-captcha.</span>createMathExpr
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createMathExpr = function (options) {
+	const expr = random.mathExpr();
+	const text = expr.text;
+	const data = createCaptcha(expr.equation, options);
+
+	return {text, data};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `color`: true // characters will have distinct colors instead of grey, true if background option is set
+* `background`: &#x27;#cc9966&#x27; // background color of the svg image
+
+This function returns an object that has the following property:
+* `data`: string // svg path data
+* `text`: string // captcha text
+
+#### `svgCaptcha.<span class="apidocCodeKeywordSpan">createMathExpr</span>(options)`
+Similar to create api, you have the same options and return value.
+The difference is that data is a svg will be an math equation on screen
+and text will be the result of that equation in string, otherwise the usage
+is the same as above.
+
+#### `svgCaptcha.loadFont(url)`
+Load your own font and override the default font.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-captcha.loadFont" id="apidoc.element.svg-captcha.loadFont">
+        function <span class="apidocSignatureSpan">svg-captcha.</span>loadFont
+        <span class="apidocSignatureSpan">(filepath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">filepath =&#x3e; {
+	const font = opentype.loadSync(filepath);
+	options.font = font;
+	options.ascender = font.ascender;
+	options.descender = font.descender;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+#### `svgCaptcha.createMathExpr(options)`
+Similar to create api, you have the same options and return value.
+The difference is that data is a svg will be an math equation on screen
+and text will be the result of that equation in string, otherwise the usage
+is the same as above.
+
+#### `svgCaptcha.<span class="apidocCodeKeywordSpan">loadFont</span>(url)`
+Load your own font and override the default font.
+* `url`: string // path to your font
+This api is a wrapper around loadFont api of opentype.js.
+Your may need experiment around various options to make your own font accessible.
+See the following api.
+
+#### `svgCaptcha.options`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-captcha.randomText" id="apidoc.element.svg-captcha.randomText">
+        function <span class="apidocSignatureSpan">svg-captcha.</span>randomText
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">randomText = function (options) {
+	if (typeof options === &#x27;number&#x27;) {
+		options = {size: options};
+	}
+	options = options || {};
+
+	const size = options.size || 4;
+	const ignoreChars = options.ignoreChars || &#x27;&#x27;;
+	let i = -1;
+	let out = &#x27;&#x27;;
+	let chars = opts.charPreset;
+
+	if (ignoreChars) {
+		chars = stripCharsFromString(chars, ignoreChars);
+	}
+
+	const len = chars.length - 1;
+
+	while (++i &#x3c; size) {
+		out += chars[randomInt(0, len)];
+	}
+
+	return out;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+In addition to size, noise, color, and background, you can also set the following property:
+* `width`: number // width of captcha
+* `height`: number // height of captcha
+* `fontSize`: number // captcha text size
+* `charPreset`: string // random character preset
+
+#### `svgCaptcha.<span class="apidocCodeKeywordSpan">randomText</span>([size|options])`
+return a random string.
+#### `svgCaptcha(text, options)`
+return a svg captcha based on text provided.
+
+In pre 1.1.0 version you have to call these two functions,
+now you can call create() to save some key strokes ;).
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.svg-captcha.option_manager" id="apidoc.module.svg-captcha.option_manager">module svg-captcha.option_manager</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.svg-captcha.option_manager.loadFont" id="apidoc.element.svg-captcha.option_manager.loadFont">
+        function <span class="apidocSignatureSpan">svg-captcha.option_manager.</span>loadFont
+        <span class="apidocSignatureSpan">(filepath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">filepath =&#x3e; {
+	const font = opentype.loadSync(filepath);
+	options.font = font;
+	options.ascender = font.ascender;
+	options.descender = font.descender;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+#### `svgCaptcha.createMathExpr(options)`
+Similar to create api, you have the same options and return value.
+The difference is that data is a svg will be an math equation on screen
+and text will be the result of that equation in string, otherwise the usage
+is the same as above.
+
+#### `svgCaptcha.<span class="apidocCodeKeywordSpan">loadFont</span>(url)`
+Load your own font and override the default font.
+* `url`: string // path to your font
+This api is a wrapper around loadFont api of opentype.js.
+Your may need experiment around various options to make your own font accessible.
+See the following api.
+
+#### `svgCaptcha.options`
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.svg-captcha.random" id="apidoc.module.svg-captcha.random">module svg-captcha.random</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.svg-captcha.random.captchaText" id="apidoc.element.svg-captcha.random.captchaText">
+        function <span class="apidocSignatureSpan">svg-captcha.random.</span>captchaText
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">captchaText = function (options) {
+	if (typeof options === &#x27;number&#x27;) {
+		options = {size: options};
+	}
+	options = options || {};
+
+	const size = options.size || 4;
+	const ignoreChars = options.ignoreChars || &#x27;&#x27;;
+	let i = -1;
+	let out = &#x27;&#x27;;
+	let chars = opts.charPreset;
+
+	if (ignoreChars) {
+		chars = stripCharsFromString(chars, ignoreChars);
+	}
+
+	const len = chars.length - 1;
+
+	while (++i &#x3c; size) {
+		out += chars[randomInt(0, len)];
+	}
+
+	return out;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-captcha.random.color" id="apidoc.element.svg-captcha.random.color">
+        function <span class="apidocSignatureSpan">svg-captcha.random.</span>color
+        <span class="apidocSignatureSpan">(bgColor)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">color = function (bgColor) {
+	// Random 24 colors
+	// or based on step
+	const hue = randomInt(0, 24) / 24;
+
+	const saturation = randomInt(60, 80) / 100;
+	const bgLightness = bgColor ? getLightness(bgColor) : 1.0;
+	let minLightness;
+	let maxLightness;
+	if (bgLightness &#x3e;= 0.5) {
+		minLightness = Math.round(bgLightness * 100) - 45;
+		maxLightness = Math.round(bgLightness * 100) - 25;
+	} else {
+		minLightness = Math.round(bgLightness * 100) + 25;
+		maxLightness = Math.round(bgLightness * 100) + 45;
+	}
+	const lightness = randomInt(minLightness, maxLightness) / 100;
+
+	const q = lightness &#x3c; 0.5 ?
+		lightness * (lightness + saturation) :
+		lightness + saturation - (lightness * saturation);
+	const p = (2 * lightness) - q;
+
+	const r = Math.floor(hue2rgb(p, q, hue + (1 / 3)) * 255);
+	const g = Math.floor(hue2rgb(p, q, hue) * 255);
+	const b = Math.floor(hue2rgb(p, q, hue - (1 / 3)) * 255);
+	<span class="apidocCodeCommentSpan">/* eslint-disable no-mixed-operators */
+</span>	const c = ((b | g &#x3c;&#x3c; 8 | r &#x3c;&#x3c; 16) | 1 &#x3c;&#x3c; 24).toString(16).slice(1);
+
+	return &#x27;#&#x27; + c;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-captcha.random.greyColor" id="apidoc.element.svg-captcha.random.greyColor">
+        function <span class="apidocSignatureSpan">svg-captcha.random.</span>greyColor
+        <span class="apidocSignatureSpan">(min, max)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">greyColor = function (min, max) {
+	min = min || 1;
+	max = max || 9;
+	const int = randomInt(min, max).toString(16);
+
+	return `#${int}${int}${int}`;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-captcha.random.int" id="apidoc.element.svg-captcha.random.int">
+        function <span class="apidocSignatureSpan">svg-captcha.random.</span>int
+        <span class="apidocSignatureSpan">(min, max)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">int = function (min, max) {
+	return Math.round(min + (Math.random() * (max - min)));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-captcha.random.mathExpr" id="apidoc.element.svg-captcha.random.mathExpr">
+        function <span class="apidocSignatureSpan">svg-captcha.random.</span>mathExpr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mathExpr = function () {
+	const left = randomInt(1, 9);
+	const right = randomInt(1, 9);
+	const text = (left + right).toString();
+	const equation = left + &#x27;+&#x27; + right;
+
+	return {text, equation};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
